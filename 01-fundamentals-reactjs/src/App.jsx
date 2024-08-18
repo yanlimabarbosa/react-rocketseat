@@ -1,9 +1,13 @@
-function App() {
+import { Post } from "./Post"
+
+export function App() {
   return (
     <>
-      <h1>Vite + React</h1>
+      <Post
+        author="Yan Barbosa"
+        content="Lorem ipsum dolor sit ametmos laborum officiis laboriosam culpa totam quisquam, mollitia exercitationem nostrum aut voluptatibus!"
+      />
+      <Post author="Joseph Benter" content="Really cool!" />
     </>
   )
 }
-
-export default App
