@@ -35,10 +35,11 @@ export function Post({ author, content, publishedAt }) {
   }
 
   function deleteComment(commentToDelete) {
-    const commentsWithoutDeletedOne = comments.filter(comment=>{
-      return comment !
+    const commentsWithoutDeletedOne = comments.filter((comment) => {
+      return comment !== commentToDelete
     })
-    setComments(comments.filter((comment) => comment !== commentToDelete))
+    
+    setComments(commentsWithoutDeletedOne)
   }
 
   return (
