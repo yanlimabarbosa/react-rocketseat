@@ -7,8 +7,6 @@ import { Comment } from "./Comment"
 import styles from "./Post.module.css"
 import { useState } from "react"
 
-const comments = [1, 2, 3]
-
 export function Post({ author, content, publishedAt }) {
   const [comments, setComments] = useState(["Post muito bacana, hein?"])
 
@@ -34,6 +32,10 @@ export function Post({ author, content, publishedAt }) {
 
   function handleNewCommentChange() {
     setNewCommentText(event.target.value)
+  }
+
+  function deleteComment(comment) {
+    console.log(`Deletar comentário ${comment}`)
   }
 
   return (
@@ -98,7 +100,13 @@ export function Post({ author, content, publishedAt }) {
 
       <div className={styles.commentList}>
         {comments.map((comment) => {
-          return <Comment key={comment} content={comment} />
+          return (
+            <Comment
+              key={comment}
+              content={comment}
+              onDeleteComment={deleteComment}
+            />
+          )
         })}
       </div>
     </article>
