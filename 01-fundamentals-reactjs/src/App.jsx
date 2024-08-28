@@ -26,7 +26,7 @@ const posts = [
     publishedAt: new Date("2024-05-24 21:00:00"),
   },
   {
-    id: 1,
+    id: 2,
     author: {
       avatarUrl: "https://github.com/diego3g.png",
       name: "Diego Alvesg",
