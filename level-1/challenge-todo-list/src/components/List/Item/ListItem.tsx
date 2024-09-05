@@ -13,7 +13,7 @@ export function ListItem({
   handleDeleteTask,
   handleToggleChecked,
 }: ListItemProps) {
-  const checkbox = todo.isChecked ? "checked" : "unchecked" //
+  const checkbox = todo.isChecked ? "checked" : "unchecked"
 
   return (
     <div className={styles.container}>
