@@ -1,5 +1,7 @@
 .container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   flex: 1;
 
   justify-content: space-between;
@@ -33,4 +35,3 @@ aside span {
   font-size: 0.75rem;
   padding: 2px 8px;
 }
-
