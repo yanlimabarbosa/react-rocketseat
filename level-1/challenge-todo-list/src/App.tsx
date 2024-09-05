@@ -8,6 +8,7 @@ import { ListEmpty } from "./components/List/Empty/ListEmpty.js"
 import { ListItem } from "./components/List/Item/ListItem.js"
 import { useState } from "react"
 export interface Todo {
+  id: number
   isChecked: boolean
   todoName: string
 }
@@ -23,13 +24,14 @@ function App() {
       {
         isChecked: false,
         todoName: newTask,
+        id: new Date().getTime(),
       },
     ])
     setNewTask("")
   }
 
   function handleDeleteTask(deletedTodo: Todo) {
-    setTodos(todos.filter((todo) => todo !== deletedTodo))
+    setTodos(todos.filter((todo) => todo.id !== deletedTodo.id))
   }
 
   function handleToggleChecked(todoToToggle: Todo) {
@@ -66,6 +68,7 @@ function App() {
             todos?.map((todo) => {
               return (
                 <ListItem
+                  key={todo.id}
                   todo={todo}
                   handleDeleteTask={handleDeleteTask}
                   handleToggleChecked={handleToggleChecked}
