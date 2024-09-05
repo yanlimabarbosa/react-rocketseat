@@ -1,18 +1,30 @@
 import { Check, Trash } from "@phosphor-icons/react"
 import styles from "./ListItem.module.css"
+import { Todo } from "../../../App"
 
-export function ListItem() {
+interface ListItemProps {
+  todo: Todo
+  handleDeleteTask: (todo: Todo) => void
+  handleToggleChecked: (todo: Todo) => void
+}
+
+export function ListItem({
+  todo,
+  handleDeleteTask,
+  handleToggleChecked,
+}: ListItemProps) {
+  const checkbox = todo.isChecked ? "checked" : "unchecked" //
+
   return (
     <div className={styles.container}>
-      <label>
-        {/* <input type="checkbox" /> */}
-        <span className={`${styles.checkbox} ${styles.checked}`}>
-          <Check size={16} />
+      <label className={`${styles.checkbox} ${styles[checkbox]}`}>
+        <span onClick={() => handleToggleChecked(todo)}>
+          {todo.isChecked && <Check size={16} />}
         </span>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <p>{todo.todoName}</p>
       </label>
-      <button>
+      <button onClick={() => handleDeleteTask(todo)}>
         <Trash size={16} />
       </button>
     </div>
