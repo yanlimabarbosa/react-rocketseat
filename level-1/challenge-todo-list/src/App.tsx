@@ -5,6 +5,7 @@ import { Input } from "./components/Input/Input.js"
 import { Header } from "./components/Header/Header.js"
 import { ListHeader } from "./components/List/Header/ListHeader.js"
 import { ListEmpty } from "./components/List/Empty/ListEmpty.js"
+import { ListItem } from "./components/List/Item/ListItem.js"
 
 function App() {
   return (
@@ -20,7 +21,10 @@ function App() {
 
         <div className={styles.tasksList}>
           <ListHeader />
-          <ListEmpty />
+          {/* <ListEmpty /> */}
+          <ListItem />
+          <ListItem />
+          <ListItem />
         </div>
       </section>
     </>
