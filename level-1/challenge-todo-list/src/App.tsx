@@ -6,7 +6,7 @@ import { Header } from "./components/Header/Header.js"
 import { ListHeader } from "./components/List/Header/ListHeader.js"
 import { ListEmpty } from "./components/List/Empty/ListEmpty.js"
 import { ListItem } from "./components/List/Item/ListItem.js"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 export interface Todo {
   isChecked: boolean
   todoName: string
