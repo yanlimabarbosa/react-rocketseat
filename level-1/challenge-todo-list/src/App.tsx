@@ -4,6 +4,7 @@ import { Button } from "./components/Button/Button.js"
 import { Input } from "./components/Input/Input.js"
 import { Header } from "./components/Header/Header.js"
 import { ListHeader } from "./components/List/Header/ListHeader.js"
+import { ListEmpty } from "./components/List/Empty/ListEmpty.js"
 
 function App() {
   return (
@@ -16,7 +17,11 @@ function App() {
             Criar <PlusCircle size={16} color="#f2f2f2" weight="bold" />
           </Button>
         </div>
-        <ListHeader />
+
+        <div className={styles.tasksList}>
+          <ListHeader />
+          <ListEmpty />
+        </div>
       </section>
     </>
   )
