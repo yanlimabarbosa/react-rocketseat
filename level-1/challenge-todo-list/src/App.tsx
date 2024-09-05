@@ -48,6 +48,8 @@ function App() {
     )
   }
 
+  const sortedTodos = [...todos].sort((a, b) => b.id - a.id)
+
   return (
     <>
       <Header />
@@ -66,12 +68,12 @@ function App() {
         </div>
 
         <div className={styles.tasksList}>
-          <ListHeader todos={todos} />
+          <ListHeader todos={sortedTodos} />
 
-          {todos?.length < 1 ? (
+          {sortedTodos.length < 1 ? (
             <ListEmpty />
           ) : (
-            todos?.map((todo) => {
+            sortedTodos.map((todo) => {
               return (
                 <ListItem
                   key={todo.id}
