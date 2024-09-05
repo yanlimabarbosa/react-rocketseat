@@ -30,14 +30,20 @@ function App() {
     setNewTask("")
   }
 
-  function handleDeleteTask(deletedTodo: Todo) {
-    setTodos(todos.filter((todo) => todo.id !== deletedTodo.id))
+  function handleDeleteTask(todoId: number) {
+    const confirmDelete = window.confirm("Deseja realmente apagar essa tarefa?")
+
+    if (confirmDelete) {
+      setTodos(todos.filter((todo) => todo.id !== todoId))
+    }
   }
 
-  function handleToggleChecked(todoToToggle: Todo) {
+  function handleToggleChecked(todoIdToToggle: number) {
     setTodos(
       todos.map((todo) =>
-        todo === todoToToggle ? { ...todo, isChecked: !todo.isChecked } : todo
+        todo.id === todoIdToToggle
+          ? { ...todo, isChecked: !todo.isChecked }
+          : todo
       )
     )
   }
