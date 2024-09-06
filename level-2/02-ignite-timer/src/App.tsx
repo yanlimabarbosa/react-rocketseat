@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components"
 import { Button } from "./components/Button.js"
-import { defaultTheme } from "./styles/default.js"
+import { defaultTheme } from "./styles/themes/default.js"
 
 export function App() {
   return (
