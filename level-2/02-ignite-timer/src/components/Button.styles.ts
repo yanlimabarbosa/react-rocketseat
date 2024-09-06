@@ -1,3 +1,4 @@
+import { DefaultTheme } from './../../@types/styled.d';
 import styled, { css } from "styled-components"
 
 export type ButtonVariantColor = "primary" | "secondary" | "danger" | "success"
@@ -17,7 +18,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   width: 100px;
   height: 40px;
 
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${props => props.theme.primary};
   color:${({ theme }) => theme.white}
 
   /* ${props => {
