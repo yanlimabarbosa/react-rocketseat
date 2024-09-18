@@ -42,7 +42,7 @@ export function CylesContextProvider({ children }: CyclesContextProviderProps) {
       cycles: [],
       activeCycleId: null,
     },
-    () => {
+    (initialState) => {
       const storedStateAsJSON = localStorage.getItem(
         '@ignite-timer:cycles-state-1.0.0',
       )
@@ -50,6 +50,8 @@ export function CylesContextProvider({ children }: CyclesContextProviderProps) {
       if (storedStateAsJSON) {
         return JSON.parse(storedStateAsJSON)
       }
+
+      return initialState
     },
   )
 
