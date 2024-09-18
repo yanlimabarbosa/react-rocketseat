@@ -7,9 +7,9 @@ import {
 } from 'react'
 import { Cycle, cyclesReducer } from '../reducers/cycles/reducer'
 import {
-  ActionTypes,
   addNewCycleAction,
   interruptCurrentCycleAction,
+  markCurrentCycleAsFinishedAction,
 } from '../reducers/cycles/actions'
 import { differenceInSeconds } from 'date-fns'
 
@@ -76,7 +76,7 @@ export function CylesContextProvider({ children }: CyclesContextProviderProps) {
   }
 
   function markCurrentCycleAsFinished() {
-    dispatch(markCurrentCycleAsFinished())
+    dispatch(markCurrentCycleAsFinishedAction())
   }
 
   function interruptCurrentCycle() {
