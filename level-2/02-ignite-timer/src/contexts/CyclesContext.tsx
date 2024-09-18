@@ -64,6 +64,20 @@ export function CylesContextProvider({ children }: CyclesContextProviderProps) {
         }
       }
 
+      if (action.type === 'MARK_CURRENT_CYCLE_AS_FINISHED') {
+        return {
+          ...state,
+          cycles: state.cycles.map((cycle) => {
+            if (cycle.id === state.activeCycleId) {
+              return { ...cycle, finishedDate: new Date() }
+            } else {
+              return cycle
+            }
+          }),
+          activeCycleId: null,
+        }
+      }
+
       return state
     },
     {
@@ -72,12 +86,9 @@ export function CylesContextProvider({ children }: CyclesContextProviderProps) {
     },
   )
 
-  // const [activeCycleId, setActiveCycleId] = useState<string | null>(null)
-
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(0)
 
   const { cycles, activeCycleId } = cyclesState
-
   const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)
 
   function setSecondsPassed(seconds: number) {
@@ -91,16 +102,6 @@ export function CylesContextProvider({ children }: CyclesContextProviderProps) {
         activeCycleId,
       },
     })
-
-    // setCycles((state) =>
-    //   state.map((cycle) => {
-    //     if (cycle.id === activeCycleId) {
-    //       return { ...cycle, finishedDate: new Date() }
-    //     } else {
-    //       return cycle
-    //     }
-    //   }),
-    // )
   }
 
   function createNewCycle(data: CreateCycleData) {
@@ -120,19 +121,10 @@ export function CylesContextProvider({ children }: CyclesContextProviderProps) {
       },
     })
 
-    // setCycles((state) => [...state, newCycle])
-
-    // setActiveCycleId(id)
     setAmountSecondsPassed(0)
   }
 
   function interruptCurrentCycle() {
-    // setCycles((state) =>
-    //
-    // )
-
-    // setActiveCycleId(null)
-
     dispatch({
       type: 'INTERRUPT_CURRENT_CYCLE',
       payload: {
