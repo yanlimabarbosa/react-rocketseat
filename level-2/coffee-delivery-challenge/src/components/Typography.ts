@@ -26,7 +26,7 @@ export const RegularText = styled.p<RegularTextProps>`
   line-height: 130%;
   color: ${({ theme, color }) => theme.colors[`base-${color ?? 'title'}`]};
 
-  font-family: ${({ theme }) => theme.fonts.family.title};
+  font-family: ${({ theme }) => theme.fonts.family.regular};
   font-weight: ${({ weight }) => weight ?? 400};
   font-size: ${({ theme, size }) =>
     theme.fonts.sizes[`text-regular-${size ?? 'm'}`]};

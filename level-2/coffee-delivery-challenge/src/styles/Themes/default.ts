@@ -22,7 +22,7 @@ export const defaultTheme = {
   },
   fonts: {
     family: {
-      primary: '"Roboto", sans-serif',
+      regular: '"Roboto", sans-serif',
       secondary: '"Baloo 2", cursive',
     },
     sizes: {
