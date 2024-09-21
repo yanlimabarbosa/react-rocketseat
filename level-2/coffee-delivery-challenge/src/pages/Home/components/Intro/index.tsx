@@ -50,7 +50,7 @@ export function Intro() {
           </BenefitsContainer>
         </div>
         <div>
-          <img src={introImg} />
+          <img src={introImg} className="img" />
         </div>
       </IntroContent>
     </IntroContainer>

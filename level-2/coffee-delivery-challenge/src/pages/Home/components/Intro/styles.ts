@@ -18,6 +18,11 @@ export const IntroContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 992px) {
+    height: auto;
+    flex-direction: column;
+  }
 `
 
 export const IntroContent = styled.div`
@@ -25,10 +30,19 @@ export const IntroContent = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 3.5rem;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    padding: 1rem 0;
+
+    .img {
+      width: 100%;
+    }
+  }
 `
 
 export const IntroTitle = styled(TitleText)`
-  margin-bottom: '1rem';
+  margin-bottom: 1rem;
 `
 
 export const BenefitsContainer = styled.div`
@@ -37,4 +51,9 @@ export const BenefitsContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   row-gap: 1.25rem;
   margin-top: 4.125rem;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    margin-top: 2.5rem;
+  }
 `

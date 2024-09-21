@@ -15,19 +15,35 @@ interface RegularTextProps {
 export const TitleText = styled.h1<TitleTextProps>`
   line-height: 130%;
   color: ${({ theme, color }) => theme.colors[`base-${color ?? 'title'}`]};
-
-  font-family: ${({ theme }) => theme.fonts.family.title};
+  font-family: ${({ theme }) => theme.fonts.family.secondary};
   font-weight: ${({ weight }) => weight ?? 800};
   font-size: ${({ theme, size }) =>
     theme.fonts.sizes[`title-title-${size ?? 'm'}`]};
+
+  @media (max-width: 768px) {
+    font-size: ${({ theme, size }) =>
+    theme.fonts.sizes[`title-title-${size === 'xl' ? 'l' : (size ?? 's')}`]};
+  }
+
+  @media (max-width: 480px) {
+    font-size: ${({ theme }) => theme.fonts.sizes[`title-title-s`]};
+  }
 `
 
 export const RegularText = styled.p<RegularTextProps>`
   line-height: 130%;
   color: ${({ theme, color }) => theme.colors[`base-${color ?? 'title'}`]};
-
   font-family: ${({ theme }) => theme.fonts.family.regular};
   font-weight: ${({ weight }) => weight ?? 400};
   font-size: ${({ theme, size }) =>
     theme.fonts.sizes[`text-regular-${size ?? 'm'}`]};
+
+  @media (max-width: 768px) {
+    font-size: ${({ theme, size }) =>
+    theme.fonts.sizes[`text-regular-${size === 'l' ? 'm' : (size ?? 's')}`]};
+  }
+
+  @media (max-width: 480px) {
+    font-size: ${({ theme }) => theme.fonts.sizes[`text-regular-s`]};
+  }
 `
