@@ -6,11 +6,9 @@ import {
   Name,
   Tags,
 } from './styles'
-import ExpressoTradicional from '../../../../assets/coffees/expresso-tradicional.png'
 import { RegularText, TitleText } from '../../../../components/Typography'
 import { QuantityInput } from '../../../../components/QuantityInput'
 import { ShoppingCart } from 'phosphor-react'
-import { coffees } from '../../../../data/coffees'
 import { formatMoney } from '../../../../utils/formatMonet'
 
 export interface Coffee {
