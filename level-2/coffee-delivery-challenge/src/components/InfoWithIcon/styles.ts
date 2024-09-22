@@ -11,8 +11,8 @@ interface IconContainerProps {
 }
 
 export const IconContainer = styled.div<IconContainerProps>`
-  width: 2rem;
-  height: 2rem;
+  min-width: 2rem;
+  min-height: 2rem;
   border-radius: 50%;
 
   background: ${({ iconBg }) => iconBg};
