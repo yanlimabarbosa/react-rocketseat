@@ -12,7 +12,7 @@ import { ShoppingCart } from 'phosphor-react'
 import { formatMoney } from '../../../../utils/formatMonet'
 
 export interface Coffee {
-  description: 'string'
+  description: string
   id: number
   name: string
   photo: string
