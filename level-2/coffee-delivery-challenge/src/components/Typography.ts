@@ -22,7 +22,7 @@ export const TitleText = styled.h1<TitleTextProps>`
 
   @media (max-width: 768px) {
     font-size: ${({ theme, size }) =>
-    theme.fonts.sizes[`title-title-${size === 'xl' ? 'l' : (size ?? 's')}`]};
+      theme.fonts.sizes[`title-title-${size === 'xl' ? 'l' : (size ?? 's')}`]};
   }
 
   @media (max-width: 480px) {
@@ -40,7 +40,7 @@ export const RegularText = styled.p<RegularTextProps>`
 
   @media (max-width: 768px) {
     font-size: ${({ theme, size }) =>
-    theme.fonts.sizes[`text-regular-${size === 'l' ? 'm' : (size ?? 's')}`]};
+      theme.fonts.sizes[`text-regular-${size === 'l' ? 'm' : (size ?? 's')}`]};
   }
 
   @media (max-width: 480px) {

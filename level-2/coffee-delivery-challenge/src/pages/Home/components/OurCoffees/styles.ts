@@ -9,7 +9,7 @@ export const CoffeeList = styled.div`
   grid-template-columns: repeat(4, 1fr);
   column-gap: 2rem;
   row-gap: 2.5rem;
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
   width: 100%;
 
   @media (max-width: 768px) {

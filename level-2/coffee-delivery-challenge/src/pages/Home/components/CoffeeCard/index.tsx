@@ -1,10 +1,4 @@
-import {
-  CoffeeCardContainer,
-  CoffeeList,
-  Description,
-  Name,
-  Tags,
-} from './styles'
+import { CoffeeCardContainer, Description, Name, Tags } from './styles'
 import ExpressoTradicional from '../../../../assets/coffees/expresso-tradicional.png'
 
 export function CoffeeCard() {
