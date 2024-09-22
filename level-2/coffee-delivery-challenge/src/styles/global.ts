@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body,input,textarea,button{
-    font-family: ${({ theme }) => theme.fonts.family.primary};
+    font-family: ${({ theme }) => theme.fonts.family.regular};
     font-weight: 400;
     font-size: ${({ theme }) => theme.fonts.sizes['text-regular-m']}
   }
@@ -28,5 +28,16 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
+  }
+
+  /* remove button arrows */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
   }
 `
