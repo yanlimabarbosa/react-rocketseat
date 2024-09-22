@@ -10,25 +10,40 @@ import ExpressoTradicional from '../../../../assets/coffees/expresso-tradicional
 import { RegularText, TitleText } from '../../../../components/Typography'
 import { QuantityInput } from '../../../../components/QuantityInput'
 import { ShoppingCart } from 'phosphor-react'
+import { coffees } from '../../../../data/coffees'
+import { formatMoney } from '../../../../utils/formatMonet'
 
-export function CoffeeCard() {
+export interface Coffee {
+  description: 'string'
+  id: number
+  name: string
+  photo: string
+  price: number
+  tags: string[]
+}
+
+interface CoffeeProps {
+  coffee: Coffee
+}
+
+export function CoffeeCard({ coffee }: CoffeeProps) {
   return (
     <CoffeeCardContainer>
-      <img src={ExpressoTradicional} />
+      <img src={`/coffees/${coffee.photo}`} />
       <Tags>
-        <span>Tradicional</span>
-        <span>com leite</span>
+        {coffee.tags.map((tag) => (
+          <span key={`${coffee.id}${tag}`}>{tag}</span>
+        ))}
       </Tags>
-      <Name>Expresso tradicional</Name>
-      <Description>
-        O tradicional café feito com água quente e grãos moídos
-      </Description>
+
+      <Name>{coffee.name}</Name>
+      <Description>{coffee.description}</Description>
 
       <CardFooter>
         <div>
           <RegularText size="s">R$</RegularText>
           <TitleText size="m" color="text" as="strong">
-            9,90
+            {formatMoney(coffee.price)}
           </TitleText>
         </div>
 
