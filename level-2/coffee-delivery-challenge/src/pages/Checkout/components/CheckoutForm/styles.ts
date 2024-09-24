@@ -5,7 +5,8 @@ export const CheckoutFormContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  width: 40rem;
+  flex: 1;
+  max-width: 40rem;
 `
 
 export const FormSectionContainer = styled(SectionBaseStyle)`
@@ -55,4 +56,8 @@ export const PaymentMethodOptionsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 `
