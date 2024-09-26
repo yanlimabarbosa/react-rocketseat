@@ -7,8 +7,6 @@ import { useCart } from '../../hooks/useCart'
 export function Header() {
   const { cartQuantity } = useCart()
 
-  console.log(cartQuantity)
-
   return (
     <HeaderContainer>
       <div className="container">

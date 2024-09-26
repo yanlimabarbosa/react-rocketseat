@@ -41,6 +41,7 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
   padding: 0 0.5rem;
   position: relative;
   font-size: ${({ theme }) => theme.fonts.sizes['text-regular-s']};
+  cursor: inherit;
 
   span {
     position: absolute;
