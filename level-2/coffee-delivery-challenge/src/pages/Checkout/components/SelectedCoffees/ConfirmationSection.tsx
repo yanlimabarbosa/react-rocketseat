@@ -1,5 +1,5 @@
-import { Button } from '../../../../../components/Button'
-import { RegularText, TitleText } from '../../../../../components/Typography'
+import { Button } from '../../../../components/Button'
+import { RegularText, TitleText } from '../../../../components/Typography'
 import { ConfirmationSectionContainer } from './styles'
 
 export function ConfirmationSection() {

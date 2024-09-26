@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { SectionBaseStyle } from '../../../styles'
+import { SectionBaseStyle } from '../../styles'
 
 export const SelectedCoffeesContainer = styled.div`
   display: flex;

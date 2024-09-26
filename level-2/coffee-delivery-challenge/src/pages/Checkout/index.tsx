@@ -1,5 +1,5 @@
 import { CheckoutForm } from './components/CheckoutForm'
-import { SelectedCoffees } from './components/CheckoutForm/SelectedCoffees'
+import { SelectedCoffees } from './components/SelectedCoffees'
 import { CheckoutContainer } from './styles'
 
 export function CheckoutPage() {

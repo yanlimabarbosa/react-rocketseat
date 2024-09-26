@@ -1,5 +1,5 @@
-import { TitleText } from '../../../../../components/Typography'
-import { CoffeeCartCard } from '../../CoffeeCartCard'
+import { TitleText } from '../../../../components/Typography'
+import { CoffeeCartCard } from '../CoffeeCartCard'
 import { ConfirmationSection } from './ConfirmationSection'
 import { DetailsContainer, SelectedCoffeesContainer } from './styles'
 
