@@ -1,6 +1,6 @@
-import { createContext, ReactNode, useState } from 'react'
-import { Coffee } from '../pages/Home/components/CoffeeCard'
-import { produce } from 'immer'
+import { createContext, ReactNode, useState } from "react"
+import { Coffee } from "../pages/Home/components/CoffeeCard"
+import { produce } from "immer"
 
 export interface CartItem extends Coffee {
   quantity: number
@@ -10,9 +10,10 @@ interface CartContextType {
   cartItems: CartItem[]
   cartQuantity: number
   addCoffeeToCart: (coffee: CartItem) => void
+  removeCoffeeFromCard: (cartItemId: number) => void
   changeCartItemQuantiy: (
     cartItemId: number,
-    type: 'increase' | 'decrease',
+    type: "increase" | "decrease"
   ) => void
 }
 
@@ -28,7 +29,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
 
   function addCoffeeToCart(coffee: CartItem) {
     const coffeeAlreadyExistsInCard = cartItems.findIndex(
-      (cartItem) => cartItem.id === coffee.id,
+      (cartItem) => cartItem.id === coffee.id
     )
 
     const newCart = produce(cartItems, (draft) => {
@@ -44,17 +45,31 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
 
   function changeCartItemQuantiy(
     cartItemId: number,
-    type: 'increase' | 'decrease',
+    type: "increase" | "decrease"
   ) {
     const newCart = produce(cartItems, (draft) => {
       const coffeeExistInCart = cartItems.findIndex(
-        (cartItem) => cartItem.id === cartItemId,
+        (cartItem) => cartItem.id === cartItemId
       )
 
       if (coffeeExistInCart >= 0) {
         const item = draft[coffeeExistInCart]
         draft[coffeeExistInCart].quantity =
-          type === 'increase' ? item.quantity + 1 : item.quantity - 1
+          type === "increase" ? item.quantity + 1 : item.quantity - 1
+      }
+    })
+
+    setCartItems(newCart)
+  }
+
+  function removeCoffeeFromCard(cartItemId: number) {
+    const newCart = produce(cartItems, (draft) => {
+      const coffeeExistsInCart = draft.findIndex(
+        (cart) => cart.id === cartItemId
+      )
+
+      if (coffeeExistsInCart >= 0) {
+        draft.splice(coffeeExistsInCart, 1)
       }
     })
 
@@ -68,6 +83,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
         cartQuantity,
         addCoffeeToCart,
         changeCartItemQuantiy,
+        removeCoffeeFromCard,
       }}
     >
       {children}

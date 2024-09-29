@@ -2,26 +2,29 @@ import {
   ActionsContainer,
   CoffeeCartCartContainer,
   RemoveButton,
-} from './styles'
-import { RegularText } from '../../../../components/Typography'
-import { QuantityInput } from '../../../../components/QuantityInput'
-import { Trash } from 'phosphor-react'
-import { CartItem } from '../../../../contexts/CartContext'
-import { formatMoney } from '../../../../utils/formatMonet'
-import { useCart } from '../../../../hooks/useCart'
+} from "./styles"
+import { RegularText } from "../../../../components/Typography"
+import { QuantityInput } from "../../../../components/QuantityInput"
+import { Trash } from "phosphor-react"
+import { CartItem } from "../../../../contexts/CartContext"
+import { formatMoney } from "../../../../utils/formatMonet"
+import { useCart } from "../../../../hooks/useCart"
 
 interface CoffeeCartCardProps {
   coffee: CartItem
 }
 
 export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
-  const { changeCartItemQuantiy } = useCart()
+  const { changeCartItemQuantiy, removeCoffeeFromCard } = useCart()
 
   function handleIncrease() {
-    changeCartItemQuantiy(coffee.id, 'increase')
+    changeCartItemQuantiy(coffee.id, "increase")
   }
   function handleDecrease() {
-    changeCartItemQuantiy(coffee.id, 'decrease')
+    changeCartItemQuantiy(coffee.id, "decrease")
+  }
+  function handleRemove() {
+    removeCoffeeFromCard(coffee.id)
   }
 
   const coffeeTotal = coffee.price * coffee.quantity
@@ -40,7 +43,7 @@ export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
               onDecrease={handleDecrease}
               quantity={coffee.quantity}
             />
-            <RemoveButton>
+            <RemoveButton onClick={handleRemove}>
               <Trash size={16} />
               Remover
             </RemoveButton>
