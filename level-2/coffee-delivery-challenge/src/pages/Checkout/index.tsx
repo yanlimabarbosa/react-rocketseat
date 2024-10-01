@@ -4,6 +4,7 @@ import { CheckoutContainer } from "./styles"
 import * as zod from "zod"
 import { useForm, FormProvider } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
+import { useNavigate } from "react-router-dom"
 
 enum PaymentMethods {
   credit = "credit",
@@ -38,8 +39,12 @@ export function CheckoutPage() {
   const { handleSubmit } = confirmOrderForm
 
   function handleConfirmOrder(data: ConfirmOrderFormData) {
-    console.log(data)
+    navigate("/orderConfirmed", {
+      state: data,
+    })
   }
+
+  const navigate = useNavigate()
 
   return (
     <FormProvider {...confirmOrderForm}>
