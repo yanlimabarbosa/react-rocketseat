@@ -1,10 +1,10 @@
-import { CurrencyDollar, MapPinLine } from 'phosphor-react'
-import { TitleText } from '../../../../components/Typography'
-import { SectionTitle } from '../SectionTitle'
-import { CheckoutFormContainer, FormSectionContainer } from './styles'
-import { useTheme } from 'styled-components'
-import { AddressForm } from './AddressForm'
-import { PaymentMethodOptions } from './PaymentMethodOptions'
+import { CurrencyDollar, MapPinLine } from "phosphor-react"
+import { TitleText } from "../../../../components/Typography"
+import { SectionTitle } from "../SectionTitle"
+import { CheckoutFormContainer, FormSectionContainer } from "./styles"
+import { useTheme } from "styled-components"
+import { AddressForm } from "./AddressForm"
+import { PaymentMethodOptions } from "./PaymentMethodOptions"
 
 export function CheckoutForm() {
   const { colors } = useTheme()
@@ -19,7 +19,7 @@ export function CheckoutForm() {
         <SectionTitle
           title="Endereço de Entrega"
           subtitle="Informe o endereço onde deseja receber seu pedido"
-          icon={<MapPinLine size={22} color={colors['yellow-dark']} />}
+          icon={<MapPinLine size={22} color={colors["yellow-dark"]} />}
         />
 
         <AddressForm />
