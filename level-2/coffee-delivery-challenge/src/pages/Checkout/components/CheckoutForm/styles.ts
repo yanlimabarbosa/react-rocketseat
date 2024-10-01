@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { SectionBaseStyle } from '../../styles'
+import styled from "styled-components"
+import { SectionBaseStyle } from "../../styles"
 
 export const CheckoutFormContainer = styled.div`
   display: flex;
@@ -59,5 +59,10 @@ export const PaymentMethodOptionsContainer = styled.div`
 
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
+  }
+
+  > p {
+    color: ${({ theme }) => theme.colors["base-error"]};
+    grid-column: span 3;
   }
 `
