@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import './../../@types/styled.d'
+import { createGlobalStyle } from "styled-components"
+import "./../../@types/styled.d"
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -12,14 +12,14 @@ export const GlobalStyle = createGlobalStyle`
 
   body{
     background: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors['base-text']};
+    color: ${({ theme }) => theme.colors["base-text"]};
     -webkit-font-smoothing: antialiased;
   }
 
   body,input,textarea,button{
     font-family: ${({ theme }) => theme.fonts.family.regular};
     font-weight: 400;
-    font-size: ${({ theme }) => theme.fonts.sizes['text-regular-m']}
+    font-size: ${({ theme }) => theme.fonts.sizes["text-regular-m"]}
   }
 
   button {
@@ -39,5 +39,20 @@ export const GlobalStyle = createGlobalStyle`
 
   input[type="number"] {
     -moz-appearance: textfield;
+  }
+
+  /* custom scroll */
+
+  ::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors["base-button"]}
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2rem;
+    background: ${({ theme }) => theme.colors["purple"]}
   }
 `
