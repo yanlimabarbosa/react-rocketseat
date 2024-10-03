@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const SearchFormContainer = styled.form`
   display: flex;
@@ -8,20 +8,20 @@ export const SearchFormContainer = styled.form`
     flex: 1;
     border-radius: 6px;
     border: 0;
-    background-color: ${(props) => props.theme["gray-900"]};
-    color: ${(props) => props.theme["gray-300"]};
+    background-color: ${(props) => props.theme['gray-900']};
+    color: ${(props) => props.theme['gray-300']};
     padding: 1rem;
   }
 
   &::placeholder {
-    color: ${(props) => props.theme["gray-500"]};
+    color: ${(props) => props.theme['gray-500']};
   }
 
   button {
     font-weight: bold;
-    color: ${(props) => props.theme["green-300"]};
-    background: ${(props) => props.theme["gray-800"]};
-    border: solid ${(props) => props.theme["green-300"]} 2px;
+    color: ${(props) => props.theme['green-300']};
+    background: ${(props) => props.theme['gray-800']};
+    border: solid ${(props) => props.theme['green-300']} 2px;
     border-radius: 6px;
     padding: 0 2rem;
 
@@ -37,8 +37,8 @@ export const SearchFormContainer = styled.form`
     }
 
     &:not(:disabled):hover {
-      background: ${(props) => props.theme["green-500"]};
-      border-color: ${(props) => props.theme["green-500"]};
+      background: ${(props) => props.theme['green-500']};
+      border-color: ${(props) => props.theme['green-500']};
       color: ${(props) => props.theme.white};
       transition: 0.2s;
     }
