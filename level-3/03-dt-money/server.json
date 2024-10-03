@@ -9,12 +9,28 @@
       "createdAt": "2024-10-03T03:32:17.084Z"
     },
     {
-      "id": 2,
-      "description": "Hamburguer",
+      "id": 1,
+      "description": "Desenvolvimento de LandingPage",
+      "type": "income",
+      "category": "Venda",
+      "price": 1300,
+      "createdAt": "2024-02-03T03:32:17.084Z"
+    },
+    {
+      "id": 3,
+      "description": "Curso",
+      "type": "outcome",
+      "category": "Educação",
+      "price": 1960,
+      "createdAt": "2024-08-03T03:30:02.084Z"
+    },
+    {
+      "id": 4,
+      "description": "Pizza",
       "type": "outcome",
       "category": "Alimentação",
-      "price": 50,
-      "createdAt": "2024-10-03T03:30:02.084Z"
+      "price": 40,
+      "createdAt": "2024-05-03T03:30:02.084Z"
     }
   ]
 }
