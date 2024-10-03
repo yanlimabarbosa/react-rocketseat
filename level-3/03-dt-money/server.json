@@ -31,6 +31,14 @@
       "category": "Alimentação",
       "price": 40,
       "createdAt": "2024-05-03T03:30:02.084Z"
+    },
+    {
+      "description": "Desenvolvimento de App",
+      "price": 1421421,
+      "category": "Vendaaa",
+      "type": "income",
+      "createdAt": "2024-10-03T07:55:36.483Z",
+      "id": 8
     }
   ]
 }
