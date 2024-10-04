@@ -34,8 +34,8 @@
     },
     {
       "description": "Desenvolvimento de App",
-      "price": 1421421,
-      "category": "Vendaaa",
+      "price": 1420,
+      "category": "Venda",
       "type": "income",
       "createdAt": "2024-10-03T07:55:36.483Z",
       "id": 8
@@ -43,7 +43,7 @@
     {
       "description": "Camisa",
       "price": 4512,
-      "category": "",
+      "category": "Vestimenta",
       "type": "outcome",
       "createdAt": "2024-10-04T04:02:13.058Z",
       "id": 9
