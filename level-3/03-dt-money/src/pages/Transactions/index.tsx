@@ -1,4 +1,3 @@
-import { useContext } from 'react'
 import { Header } from '../../components/Header'
 import { Sumary } from '../../components/Sumary'
 import { SearchForm } from './components/SearchForm'
