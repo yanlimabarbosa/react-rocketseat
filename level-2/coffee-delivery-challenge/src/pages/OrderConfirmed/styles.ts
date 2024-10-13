@@ -1,4 +1,3 @@
-import { ImgHTMLAttributes } from 'react'
 import styled from 'styled-components'
 
 export const OrderConfirmerContainer = styled.div`
