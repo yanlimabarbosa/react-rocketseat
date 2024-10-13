@@ -1,5 +1,5 @@
 import { Button } from "../../../../components/Button"
-import { RegularText, TitleText } from "../../../../components/Typography"
+import { RegularText } from "../../../../components/Typography"
 import { useCart } from "../../../../hooks/useCart"
 import { formatMoney } from "../../../../utils/formatMonet"
 import { ConfirmationSectionContainer } from "./styles"
