@@ -24,6 +24,15 @@ export const CoffeeCartCartContainer = styled.div`
     align-self: flex-start;
     font-weight: 700;
   }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+
+    > p {
+      width: 100%;
+      text-align: right;
+    }
+  }
 `
 
 export const ActionsContainer = styled.div`
